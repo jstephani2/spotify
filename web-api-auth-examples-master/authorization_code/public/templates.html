@@ -18,6 +18,20 @@
   </div>
 </script>
 
+<script id="weather-template" type="text/x-handlebars-template">
+    <input type="hidden" id="conditions-text"/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <img id="weather-pic" src="">
+            </div>
+            <div class="col">
+                <h1 id="temp"></h1>
+            </div>
+        </div>
+    </div>
+</script>
+
 <script id="now-playing-template" type="text/x-handlebars-template">
     <input type="hidden" id="access_token" value="{{access_token}}"/>
     <input type="hidden" id="isPlaying" value="{{is_playing}}"/>
@@ -25,7 +39,12 @@
     <input type="hidden" id="duration" value="{{duration_ms}}"/>
     <div class="container-fluid">
         <div class="row">
-            <h1>Spotify</h1>
+            <div class="col">
+                <h1>Spotify</h1>
+            </div>
+            <div class="col">
+                <h1 id="clock" class="text-right"></h1>
+            </div>
         </div>
         <div class="row justify-content-center">
             <div class="col justify-content-center">
